@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title>Coming soon page</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="alert">
+    <h2><c>PING</c><d>.</d></h2>
+    <h1><a>We are launching</a> soon!</h1> 
+
+  <p>Subscribe and get notified</p> </div>
+
+  <div class="form">
+    <form>
+      <input type="email" id="email" 
+      name="email" required class="formField"
+      placeholder="Your e-mail adress..." autofocus
+      pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+      title="Please provide a valid email address"/>
+      <button type="submit" class="myButton">Notify Me</button>
+    </form>
+    
+</div>
+
+<script>
+  const missingInput = document.querySelector('input[name="email"]');
+
+  missingInput.addEventListener('invalid', function (event) {
+    if (event.target.validity.valueMissing) {
+      event.target.setCustomValidity("Whoops! It looks like you forgot to add your email!");
+    }
+  })
+
+  input.addEventListener('change', function (event) {
+    event.target.setCustomValidity('');
+  })
+
+
+
+</script>
+
+<center><img src="images/illustration-dashboard.png" class="dashboard"></center>
+<div class="imgs">
+<img src="images/facebook.svg" align="middle">
+<img src="images/twitter.svg" align="middle">
+<img src="images/instagram.svg" align="middle">
+</div>
+
+
+
+  
+
+  <footer>
+    <div class="rights">&copy; Copyright Ping. All rights reserved. </div>
+  </footer>
+</body>
+</html>
